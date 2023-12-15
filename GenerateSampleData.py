@@ -61,7 +61,7 @@ df = pd.merge(df, logistics_data, left_index=True, right_index=True)
 df = pd.merge(df, market_data, left_index=True, right_index=True)
 
 # Save the dataset to a CSV file
-df.to_csv('auto_tech_dataset.csv', index=False)
+df.to_csv('SampleDataset.csv', index=False)
 
 # Display the first few rows of the generated dataset
 print(df.head())
