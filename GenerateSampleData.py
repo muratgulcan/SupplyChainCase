@@ -19,7 +19,7 @@ supplier_data = pd.DataFrame({
     'SupplierID': [f'S{i}' for i in range(1, num_suppliers + 1)],
     'SupplierName': [f'S{i}' for i in range(1, num_suppliers + 1)],
     'SupplierLocation': [fake.city() for _ in range(num_suppliers)],
-    'QualityRating': np.random.uniform(3.5, 5.0, num_suppliers).round(2),
+    'QualityRating': np.random.uniform(1, 5.0, num_suppliers).round(2),
     'LeadTimeDays': np.random.randint(7, 30, num_suppliers)
 })
 
@@ -52,7 +52,7 @@ market_data = pd.DataFrame({
     'MarketID': [f'M{str(i).zfill(3)}' for i in range(1, num_records + 1)],
     'SalesVolume': np.random.randint(20, 150, num_records),
     'DemandForecast': np.random.randint(30, 200, num_records),
-    'CustomerSatisfaction': np.random.uniform(3.5, 5.0, num_records).round(2)
+    'CustomerSatisfaction': np.random.uniform(1, 5.0, num_records).round(2)
 })
 
 # Merge the datasets
